@@ -6,6 +6,7 @@ using System.Diagnostics.Tracing;
 using _4koneko;
 using konUI;
 using System.Diagnostics;
+using Microsoft.Xna.Framework.Media;
 
 namespace konSceneMan
 {
@@ -35,10 +36,11 @@ namespace konSceneMan
             {
                 case Scene.Main:
                     ui.ClearGuiObjects();
-                    ui.CreateButton(300, 300, 300, 100, "Play", Color.Gray, Color.WhiteSmoke, () =>
-                    {
-                        Debug.WriteLine("button test");
-                    });
+                    GUIButton playBtn = new(200, 200, 300, 100, "Play", true, Color.Gray, Color.WhiteSmoke, Color.WhiteSmoke);
+                    //playBtn.callback += (object sender, EventArgs e) =>
+                    //{;
+
+                    //};
                     break;
                 case Scene.Settings:
                     break;
